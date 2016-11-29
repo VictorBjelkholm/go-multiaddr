@@ -10,6 +10,9 @@ deps: gx covertools
 	gx --verbose install --global
 	gx-go rewrite
 
+test: deps
+	go test ./...
+
 publish:
 	gx-go rewrite --undo
 
